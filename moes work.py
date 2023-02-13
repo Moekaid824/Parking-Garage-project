@@ -1,29 +1,29 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------Anifa------------#
+class Garage:
+    def __init__(self):
+        self.tickets = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.parking_spaces = ['A','B','C','D','E','F','G','H','I','J']
+        self.current_parked_cars = {}
+    def park(self):
+        welcome = input("Welcome to the parking garage, would you like to enter, leave, or pay? ")
+        if welcome.lower() == "enter":
+            takes_ticket = input("Would you like to take a ticket (yes or no)? ")
+            if takes_ticket.lower() == "yes":
+                num_on_parking_ticket = int(input("What is the number on the parking ticket? "))
+                your_name = input("What is your name? ")
+                if num_on_parking_ticket in self.tickets:
+                    self.tickets.remove(num_on_parking_ticket)
+                    self.current_parked_cars[your_name] = self.parking_spaces[0]
+                    self.parking_spaces.pop(0)
+                    print(f"Remaining tickets: {self.tickets} \nParked Cars: {self.current_parked_cars}")
+                else:
+                    print("Invalid ticket number.")
+            else:
+                print("Alright, you cannot park here.\nHave a nice day!")
+        elif welcome.lower() == "leave":
+            self.leave_garage()
+        elif welcome.lower() == "pay":
+            self.pay_for_parking()
 
  #------------------Moe-----------------#
     def pay_for_parking(self):
