@@ -26,7 +26,7 @@ class Garage:
             if len(self.tickets) < 1: #If there is no tickets left, you cannot receive a ticket
                 print("Sorry, no more spots available.")
                 return
-            ticket = self.tickets.pop(0) #Take a ticket fromt he list
+            ticket = self.tickets.pop(0) #Take a ticket from the list
             parking_spot = self.parking_spaces.pop(0) #Take parking spot from list
             self.current_parked_cars[ticket] = parking_spot #Assign a parking spot to a ticket
             print(f"Your parking ticket is {ticket} and your parking spot is {parking_spot}.")
@@ -46,7 +46,7 @@ class Garage:
             print(f"This is the cost of your ticket: ${total}")
             pay = input("Are you ready to pay?(Y/N): ") 
             if pay.lower() == "yes" or pay.lower() == "y":
-                self.ready_to_leave[ticket_num] = self.current_parked_cars[ticket_num] #If the tikect is payed, add ticket num and parking spot to dict of cars that can leave
+                self.ready_to_leave[ticket_num] = self.current_parked_cars[ticket_num] #If the ticket is payed, add ticket num and parking spot to dict of cars that can leave
                 print("You have successfully paid your ticket!")
             else:
                 print("Ok")
