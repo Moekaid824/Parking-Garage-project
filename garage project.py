@@ -1,4 +1,3 @@
-# ------------Anifa------------#
 class Garage:
     def __init__(self):
         self.tickets = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -32,7 +31,6 @@ class Garage:
             print(f"Your parking ticket is {ticket} and your parking spot is {parking_spot}.")
             print(f"Remaining tickets: {self.tickets} \nParked Cars: {self.current_parked_cars}")
 
- #------------------Moe-----------------#
     def pay_for_parking(self):
         ticket_cost = 15
         pay_ticket = input("Are you ready to pay (yes or no)?: ")
